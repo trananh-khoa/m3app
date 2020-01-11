@@ -28,7 +28,7 @@ import convertToDataTableJSON from '@/utils/datatable';
 import data from '@/constants/data';
 
 const HEADERS = [
-  { text: 'Date (dd/mm/yyyy h:m)', value: 'date' },
+  { text: 'Date (dd/mm/yyyy h:m:s)', value: 'date' },
   { text: 'Guest ID', value: 'guestID' },
   { text: 'Device', value: 'device' },
   { text: 'Device ID', value: 'deviceID' },
