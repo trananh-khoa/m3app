@@ -1,5 +1,4 @@
 function convertToStandardTime(hours, minutes, seconds) {
-
   return `${addZeros(hours)}:${addZeros(minutes)}:${addZeros(seconds)}`;
 }
 
@@ -17,10 +16,10 @@ function getMonthFromDate(date) {
   return date.getMonth() + 1;
 }
 function addZeros(value){
-  if (i < 10) {
-    i = "0" + i;
+  if (value < 10) {
+    value = "0" + value;
   }
-  return i;
+  return value;
 }
 export function getDateFromUTC(utcSeconds) {
   return new Date(utcSeconds * 1000);
