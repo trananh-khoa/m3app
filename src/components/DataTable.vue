@@ -1,10 +1,26 @@
 <template>
-  <v-data-table
-    dense
-    :headers='headers'
-    :items='items'
-  >
-  </v-data-table>
+  <v-card class='datatable-card' raised>
+    <v-card-title>
+      Raw Data
+      <v-spacer></v-spacer>
+      <v-text-field
+        v-model='search'
+        dense
+        label='Search'
+        single-line
+        hide-details
+      ></v-text-field>
+    </v-card-title>
+    <v-data-table
+      dense
+      fixed-header
+      multi-sort
+      :headers='headers'
+      :items='items'
+      :search='search'
+    >
+    </v-data-table>
+  </v-card>
 </template>
 
 <script>
@@ -24,10 +40,13 @@ export default {
   data: () => ({
     headers: HEADERS,
     items: convertToDataTableJSON(data),
+    search: '',
   }),
 };
 </script>
 
-<style>
-
+<style scoped>
+.datatable-card {
+  margin: 20px;
+}
 </style>
