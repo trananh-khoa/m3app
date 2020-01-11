@@ -1,5 +1,6 @@
 <template>
   <v-data-table
+    dense
     :headers='headers'
     :items='items'
   >
@@ -7,6 +8,9 @@
 </template>
 
 <script>
+import convertToDataTableJSON from '@/utils/datatable';
+import data from '@/constants/data';
+
 const HEADERS = [
   { text: 'Date (dd/mm/yyyy h:m)', value: 'date' },
   { text: 'Guest ID', value: 'guestID' },
@@ -19,7 +23,7 @@ export default {
   name: 'datatable',
   data: () => ({
     headers: HEADERS,
-    items: [],
+    items: convertToDataTableJSON(data),
   }),
 };
 </script>

@@ -1,12 +1,19 @@
+import { getDateFromUTC, getDisplayDate } from '@/utils/date_utils';
+
 export default function (json) {
   const dataTableJSON = [];
-  json.forEach((key, value) => {
+  const dataKeys = Object.keys(json);
+
+  dataKeys.forEach((key) => {
+    const value = json[key];
     dataTableJSON.push({
-      date: key,
+      date: getDisplayDate(getDateFromUTC(key)),
       guestID: value['guest-id'],
       device: value.device,
       deviceID: value['device-id'],
       event: value.event,
     });
   });
+
+  return dataTableJSON;
 }
