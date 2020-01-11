@@ -9,10 +9,10 @@
 <script>
 const HEADERS = [
   { text: 'Date (dd/mm/yyyy h:m)', value: 'date' },
+  { text: 'Guest ID', value: 'guestID' },
   { text: 'Device', value: 'device' },
   { text: 'Device ID', value: 'deviceID' },
   { text: 'Event', value: 'event' },
-  { text: 'Guest ID', value: 'guestID' },
 ];
 
 export default {
