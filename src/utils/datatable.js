@@ -1,4 +1,4 @@
-import { getDateFromUTC, getDisplayDate } from '@/utils/date_utils';
+import { getDateFromUTC, getDisplayDate } from '@/utils/date-utils';
 
 export default function (json) {
   const dataTableJSON = [];
