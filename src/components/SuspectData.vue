@@ -1,22 +1,24 @@
 <template>
   <v-card raised>
     <v-card-title>Suspect Data: {{selectedSuspect}}</v-card-title>
-    <v-data-table
-      dense
-      disable-sort
-      disable-pagination
-      disable-filtering
-      fixed-header
-      height='500px'
-      item-key='date'
-      hide-default-footer
-      single-select
-      show-select
-      :headers='headers'
-      :items='items'
-      v-model='selected'
-    >
-    </v-data-table>
+    <v-container>
+      <v-data-table
+        dense
+        disable-sort
+        disable-pagination
+        disable-filtering
+        fixed-header
+        height='543px'
+        item-key='date'
+        hide-default-footer
+        single-select
+        show-select
+        :headers='headers'
+        :items='items'
+        v-model='selected'
+      >
+      </v-data-table>
+    </v-container>
   </v-card>
 </template>
 
