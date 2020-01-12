@@ -1,26 +1,32 @@
 <template>
-  <v-card class='datatable-card' raised>
-    <v-card-title>
-      Raw Data
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model='search'
-        dense
-        label='Search'
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      dense
-      fixed-header
-      multi-sort
-      :headers='headers'
-      :items='items'
-      :search='search'
-    >
-    </v-data-table>
-  </v-card>
+  <v-expansion-panels>
+    <v-expansion-panel>
+      <v-expansion-panel-header>Raw Data</v-expansion-panel-header>
+      <v-expansion-panel-content>
+        <v-card class='datatable-card' flat>
+          <v-card-title>
+            <v-text-field
+              v-model='search'
+              dense
+              label='Search'
+              single-line
+              hide-details
+            ></v-text-field>
+          </v-card-title>
+          <v-data-table
+            dense
+            fixed-header
+            multi-sort
+            :headers='headers'
+            :items='items'
+            :search='search'
+          >
+          </v-data-table>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels>
+
 </template>
 
 <script>
