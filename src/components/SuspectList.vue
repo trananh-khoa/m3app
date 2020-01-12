@@ -1,13 +1,23 @@
 <template>
-  <h1>This is the suspect list!</h1>
+  <v-card class ='suspectlist-data' raised>
+    <v-select
+        :items="items"
+        label="Read-only"
+      ></v-select>
+  </v-card>
 </template>
 
 <script>
+import getGuestList from '@/constants/visualizer-data'
 export default {
-  name: 'suspectList',
+  data:() => ({
+    items: getGuestList(),
+  })
 };
 </script>
 
 <style>
-
+.datatable-card {
+  margin: 20px;
+}
 </style>

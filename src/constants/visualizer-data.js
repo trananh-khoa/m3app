@@ -2,7 +2,7 @@
 // Loop through the JavaScript Object and get all unique Guest IDs and export an array
 import SuspectDataList from '@/constants/data.js' 
 
-export function getGuestList(){
+export default function (){
     const suspectList = [];
     const listKeys = Object.keys(SuspectDataList);
    
@@ -14,4 +14,5 @@ export function getGuestList(){
             });
         }
       });
+      return getGuestList
 }
