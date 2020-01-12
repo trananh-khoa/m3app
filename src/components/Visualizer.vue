@@ -1,8 +1,14 @@
 <template>
-  <div>
-    <SuspectList/>
-    <SuspectDataList/>
-  </div>
+  <v-container class='visualizer-card' fluid>
+    <v-row>
+      <v-col cols=4>
+        <SuspectList/>
+      </v-col>
+      <v-col cols=8>
+        <SuspectDataList/>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -18,6 +24,5 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
 </style>
