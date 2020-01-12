@@ -16,8 +16,3 @@ export default {
 };
 </script>
 
-<style>
-.datatable-card {
-  margin: 20px;
-}
-</style>
