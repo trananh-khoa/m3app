@@ -7,9 +7,9 @@
       disable-pagination
       disable-filtering
       fixed-header
-      height='250px'
-      hide-default-footer
+      height='500px'
       item-key='date'
+      hide-default-footer
       single-select
       show-select
       :headers='headers'
