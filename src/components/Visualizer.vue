@@ -2,10 +2,10 @@
   <v-container class='visualizer-card' fluid>
     <v-row>
       <v-col cols=4>
-        <SuspectList/>
+        <SuspectList @update='selectedSuspect=$event'/>
       </v-col>
       <v-col cols=8>
-        <SuspectDataList/>
+        <SuspectDataList :selectedSuspect='selectedSuspect'/>
       </v-col>
     </v-row>
   </v-container>
@@ -17,6 +17,9 @@ import SuspectDataList from '@/components/SuspectData.vue';
 
 export default {
   name: 'visualizer',
+  data: () => ({
+    selectedSuspect: '',
+  }),
   components: {
     SuspectList,
     SuspectDataList,

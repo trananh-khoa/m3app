@@ -47,6 +47,6 @@ export default {
 
 <style scoped>
 .datatable-card {
-  margin: 12px 12px -12px 12px;
+  margin: 24px 12px 0 12px;
 }
 </style>

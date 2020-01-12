@@ -1,6 +1,6 @@
 <template>
   <v-card raised>
-    <v-card-title>Suspect Data: {{suspect}}</v-card-title>
+    <v-card-title>Suspect Data: {{selectedSuspect}}</v-card-title>
     <v-data-table
       dense
       disable-sort
@@ -38,11 +38,11 @@ export default {
     selected: [],
   }),
   props: {
-    suspect: { type: String, default: 'None' },
+    selectedSuspect: { type: String, default: 'None' },
   },
   computed: {
     items() {
-      return convertToDataTableJSON(getSuspectData(this.suspect));
+      return convertToDataTableJSON(getSuspectData(this.selectedSuspect));
     },
   },
 };

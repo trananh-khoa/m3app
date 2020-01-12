@@ -5,6 +5,8 @@
       <v-select
         :items="items"
         label="Select Suspect"
+        v-model='selectedSuspect'
+        @change="$emit('update', selectedSuspect);"
       ></v-select>
     </v-container>
   </v-card>
@@ -15,6 +17,7 @@ import getGuestList from '@/utils/visualizer-data';
 
 export default {
   data: () => ({
+    selectedSuspect: '',
     items: getGuestList(),
   }),
 };
