@@ -1,9 +1,12 @@
 <template>
-  <v-card class ='suspectlist-data' raised>
-    <v-select
+  <v-card raised>
+    <v-card-title>Current Suspect</v-card-title>
+    <v-container>
+      <v-select
         :items="items"
         label="Select Suspect"
       ></v-select>
+    </v-container>
   </v-card>
 </template>
 
@@ -16,3 +19,7 @@ export default {
   }),
 };
 </script>
+
+<style>
+
+</style>

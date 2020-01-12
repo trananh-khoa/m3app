@@ -1,5 +1,5 @@
 <template>
-  <v-card class='datatable-card' raised>
+  <v-card raised>
     <v-card-title>Suspect Data: {{suspect}}</v-card-title>
     <v-data-table
       dense
