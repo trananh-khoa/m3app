@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import getGuestList from '@/utils/visualizer-data';
+import getGuestList from '@/utils/suspect-list';
 
 export default {
   data: () => ({
-    selectedSuspect: '',
+    selectedSuspect: 'None',
     items: getGuestList(),
   }),
 };

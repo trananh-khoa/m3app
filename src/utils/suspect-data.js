@@ -6,7 +6,7 @@ export default function (suspect) {
 
   keys.forEach((key) => {
     if (Data[key]['guest-id'] === suspect) {
-      suspectData[key] = Data[key];
+      suspectData[key] = { ...Data[key] };
       delete suspectData[key]['guest-id'];
     }
   });
