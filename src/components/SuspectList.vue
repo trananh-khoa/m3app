@@ -1,10 +1,22 @@
 <template>
-  <h1>This is the suspect list!</h1>
+  <v-card raised>
+    <v-card-title>Current Suspect</v-card-title>
+    <v-container>
+      <v-select
+        :items="items"
+        label="Select Suspect"
+      ></v-select>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
+import getGuestList from '@/utils/visualizer-data';
+
 export default {
-  name: 'suspectList',
+  data: () => ({
+    items: getGuestList(),
+  }),
 };
 </script>
 
