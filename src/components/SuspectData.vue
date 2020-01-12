@@ -47,6 +47,15 @@ export default {
       return convertToDataTableJSON(getSuspectData(this.selectedSuspect));
     },
   },
+  watch: {
+    selected() {
+      if (this.selected.length === 0) {
+        this.$emit('update', null);
+      } else {
+        this.$emit('update', { ...this.selected[0], guestID: this.selectedSuspect });
+      }
+    },
+  },
 };
 </script>
 

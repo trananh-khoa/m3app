@@ -9,14 +9,15 @@
         </v-row>
         <v-row>
           <v-col class='col-bottom'>
-            <SuspectDataList :selectedSuspect='selectedSuspect'/>
+            <SuspectDataList :selectedSuspect='selectedSuspect' @update='selectedData=$event'/>
           </v-col>
         </v-row>
       </v-col>
       <v-col cols=6>
-        <SuspectLocations/>
+        <SuspectLocations :suspectData='selectedData'/>
       </v-col>
     </v-row>
+    {{selectedData}}
   </v-container>
 </template>
 
@@ -29,6 +30,7 @@ export default {
   name: 'visualizer',
   data: () => ({
     selectedSuspect: '',
+    selectedData: null,
   }),
   components: {
     SuspectList,
