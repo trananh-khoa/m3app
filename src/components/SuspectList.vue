@@ -2,17 +2,17 @@
   <v-card class ='suspectlist-data' raised>
     <v-select
         :items="items"
-        label="Read-only"
+        label="Select Suspect"
       ></v-select>
   </v-card>
 </template>
 
 <script>
-import getGuestList from '@/constants/visualizer-data'
+import getGuestList from '@/utils/visualizer-data';
+
 export default {
-  data:() => ({
+  data: () => ({
     items: getGuestList(),
-  })
+  }),
 };
 </script>
-
